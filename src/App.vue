@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Main />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Main from "./components/Main.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Main
   }
 };
 </script>
@@ -25,4 +24,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 </style>
