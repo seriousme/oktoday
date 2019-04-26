@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <Main />
+    <Main/>
   </div>
 </template>
 
 <script>
 import Main from "./components/Main.vue";
+import "bootstrap";
 
 export default {
   name: "app",
@@ -25,6 +26,6 @@ export default {
   margin-top: 60px;
 }
 
-@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 </style>
