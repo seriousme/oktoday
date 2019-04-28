@@ -10,28 +10,24 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>25 April 2019</td>
-          <td>4</td>
-          <td>3</td>
-          <td>Zonnige dag</td>
-        </tr>
-        <tr>
-          <td>24 April 2019</td>
-          <td>3</td>
-          <td>4</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>23 April 2019</td>
-          <td>2</td>
-          <td>3</td>
-          <td>Regenachtige dag</td>
+        <tr v-for="record in records">
+          <td>{{ record.date }}</td>
+          <td>{{ record.mood }}</td>
+          <td>{{ record.energy }}</td>
+          <td>{{ record.remark }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    records: Array
+  }
+};
+</script>
+
 <style>
 input[type="radio"] {
   opacity: 0;
