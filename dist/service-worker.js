@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6a9b02983a01e895288d1bd042fb83cf.js"
+  "precache-manifest.e1b2a61e59a66600f446ad71bdd5672b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "oktoday"});
