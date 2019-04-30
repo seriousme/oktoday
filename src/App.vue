@@ -16,11 +16,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <li class="nav-item" v-bind:class="{ active: page == 'Overview' }">
+          <li class="nav-item" v-bind:class="{ active: page !== 'Input' }">
             <span class="nav-link" href="#" v-on:click="page = 'Input'">Invoer</span>
           </li>
-          <li class="nav-item" v-bind:class="{ active: page == 'Input' }">
+          <li class="nav-item" v-bind:class="{ active: page !== 'Overview' }">
             <span class="nav-link" href="#" v-on:click="page = 'Overview'">Overzicht</span>
+          </li>
+          <li class="nav-item" v-bind:class="{ active: page !== 'Chart' }">
+            <span class="nav-link" href="#" v-on:click="page = 'Chart'">Grafiek</span>
           </li>
         </ul>
       </div>
@@ -34,7 +37,9 @@
 <script>
 import Input from "./components/Input.vue";
 import Overview from "./components/Overview.vue";
+import Chart from "./components/Chart.vue";
 import "bootstrap";
+import "chart.js";
 
 const data = {
   records: [],
@@ -72,7 +77,8 @@ export default {
   },
   components: {
     Input,
-    Overview
+    Overview,
+    Chart
   },
   mounted: load,
   methods: {
@@ -92,5 +98,6 @@ export default {
 }
 
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/chart.js/dist/Chart.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 </style>
