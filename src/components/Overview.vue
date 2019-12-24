@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="record in records">
+        <tr v-for="record in records" v-bind:key="record.id">
           <td>{{ record.date }}</td>
           <td>{{ record.mood }}</td>
           <td>{{ record.energy }}</td>
